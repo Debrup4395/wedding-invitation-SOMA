@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>সোমা ও দেবরূপ — শুভ বিবাহ</title>
+<meta name="description" content="সোমা সরদার ও দেবরূপ বেরা-র শুভ বিবাহের সাদর আমন্ত্রণ">
+<meta property="og:title" content="সোমা ও দেবরূপ — শুভ বিবাহ">
+<meta property="og:description" content="আপনাকে সপরিবারে সাদর আমন্ত্রণ">
+<meta property="og:image" content="images/dsc.jpg">
+<meta name="theme-color" content="#8E1520">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--lal:#B3202A;--deep:#8E1520;--gold:#B8862F;--gl:#E6C27A;--iv:#FBF4E6;--paper:#FFFBF2;--ink:#3A1C1F;--soft:#6E4B4F;--night:#2A0B10}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Serif Bengali',serif;background:var(--iv);color:var(--ink);line-height:2;overflow-x:hidden}
+body:not(.open){overflow:hidden}
+.d{font-family:'Tiro Bangla',serif;font-weight:400}
+svg.lo{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2}
+section{position:relative;padding:clamp(4rem,10vw,7rem) 1.4rem;text-align:center}
+h2{font-family:'Tiro Bangla',serif;font-weight:400;font-size:clamp(2rem,6vw,3.2rem);color:var(--deep);line-height:1.4}
+.dv{display:flex;align-items:center;justify-content:center;gap:.8rem;margin:1rem auto 2rem;max-width:300px;color:var(--gold);font-size:1.7rem}
+.dv:before,.dv:after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.dv:after{transform:scaleX(-1)}
+.dv svg{animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn{display:inline-block;padding:.8rem 2.2rem;border-radius:40px;background:var(--deep);color:#fff;text-decoration:none;border:1px solid var(--gl);font:500 1rem 'Noto Serif Bengali',serif;cursor:pointer;box-shadow:0 8px 24px rgba(142,21,32,.3);transition:transform .35s,box-shadow .35s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(142,21,32,.4)}
+
+/* reveal variants */
+[data-a]{opacity:0;transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.8,.2,1),clip-path 1.4s cubic-bezier(.2,.8,.2,1)}
+[data-a=up]{transform:translateY(40px)}
+[data-a=l]{transform:translateX(-60px)}
+[data-a=r]{transform:translateX(60px)}
+[data-a=z]{transform:scale(.85)}
+[data-a=m]{clip-path:inset(0 0 100% 0);transform:scale(1.06)}
+[data-a].on{opacity:1;transform:none;clip-path:inset(0)}
+
+/* gate */
+#gate{position:fixed;inset:0;z-index:1000;pointer-events:auto}
+.dr{position:absolute;top:0;bottom:0;width:50%;background:radial-gradient(circle,rgba(230,194,122,.4) 1.5px,transparent 2px) 0 0/24px 24px,linear-gradient(var(--deep),var(--lal));transition:transform 1.8s cubic-bezier(.7,0,.2,1)}
+.dr:after{content:'';position:absolute;top:0;bottom:0;width:14px;background:linear-gradient(90deg,var(--gl),var(--gold),var(--gl))}
+.dl{left:0;border-right:1px solid var(--gl)}.dl:after{right:0}
+.dg{right:0}.dg:after{left:0}
+.med{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(86vw,380px);aspect-ratio:1;border-radius:50%;background:var(--paper);border:3px double var(--gold);outline:8px solid rgba(230,194,122,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.4rem;transition:opacity .8s,transform 1.2s;animation:pulse 3.5s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 18px rgba(230,194,122,.18)}}
+.med .lo{font-size:2.6rem;color:var(--lal);animation:spin 18s linear infinite}
+.med .n{font-size:clamp(1.7rem,7vw,2.3rem);color:var(--deep);line-height:1.3;margin:.3rem 0}
+.med p{font-size:.85rem;color:var(--soft);line-height:1.6;margin-bottom:.9rem}
+.med .btn{padding:.6rem 1.6rem;font-size:.95rem}
+body.open #gate{pointer-events:none}
+body.open .dl{transform:translateX(-101%)}body.open .dg{transform:translateX(101%)}
+body.open .med{opacity:0;transform:translate(-50%,-50%) scale(1.5)}
+body.open #gate{visibility:hidden;transition:visibility 0s 2s}
+
+/* petals */
+#pt{position:fixed;inset:0;z-index:50;pointer-events:none;overflow:hidden}
+.p{position:absolute;top:-30px;border-radius:50% 0 50% 0;opacity:0;animation:fall linear infinite}
+@keyframes fall{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.75}50%{transform:translate(40px,55vh) rotate(200deg)}100%{transform:translate(-30px,108vh) rotate(420deg);opacity:0}}
+
+/* hero */
+#hero{min-height:100svh;padding:0;display:flex;justify-content:center;align-items:flex-start;color:#fff;overflow:hidden}
+#hero picture,#hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#hero img{object-position:50% 82%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.14)}}
+#hero:before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,11,16,.8),rgba(42,11,16,.25) 50%,rgba(42,11,16,.1) 70%,rgba(42,11,16,.55))}
+.hc{position:relative;z-index:2;padding:clamp(3rem,10vh,6rem) 1.4rem 0}
+.hc>*{opacity:0;transform:translateY(26px)}
+body.open .hc>*{animation:up 1.4s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.nam{font-size:clamp(3.2rem,14vw,7.5rem);line-height:1.15;color:var(--gl);text-shadow:0 4px 26px rgba(0,0,0,.5)}
+.nam small{display:block;font-size:.34em;color:#fff;letter-spacing:.12em}
+.hc .sub{font-size:clamp(1.2rem,4vw,1.6rem);letter-spacing:.14em}
+.hc .when{margin:.6rem auto 1.8rem;font-size:1rem;opacity:.92}
+.hint{position:absolute;bottom:1.4rem;left:50%;z-index:2;width:22px;height:38px;border:2px solid var(--gl);border-radius:14px;transform:translateX(-50%)}
+.hint:after{content:'';position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--gl);animation:dot 1.8s infinite}
+@keyframes dot{60%{transform:translateY(12px);opacity:0}}
+
+/* invitation */
+#inv{background:var(--iv)}
+.sheet{position:relative;max-width:760px;margin:0 auto 2.4rem;padding:clamp(3rem,7vw,4.4rem) clamp(1.4rem,5vw,3.4rem);background:var(--paper);border:1px solid var(--gold);box-shadow:0 24px 60px rgba(142,21,32,.1)}
+.sheet:before,.sheet:after{content:'';position:absolute;left:-1px;right:-1px;height:14px;background:linear-gradient(var(--lal) 0 55%,var(--gl) 55% 65%,var(--lal) 65%)}
+.sheet:before{top:-1px}.sheet:after{bottom:-1px}
+.sheet p{font-size:clamp(1.02rem,2.6vw,1.18rem);color:var(--soft)}
+.sheet b{color:var(--deep);font-weight:600}
+.nm{display:block;font-family:'Tiro Bangla',serif;font-size:clamp(2rem,7vw,3rem);color:var(--lal);margin:.4rem 0 0;line-height:1.5}
+.sheet .nom{font-size:1.1rem;color:var(--gold);letter-spacing:.1em;margin-bottom:1rem}
+.sheet .sig{margin-top:1.8rem;font-size:1rem}
+.sheet .gap{margin:1.2rem 0}
+
+/* count */
+.cd{display:flex;justify-content:center;gap:clamp(.8rem,3.5vw,2rem);flex-wrap:wrap;margin-top:1rem}
+.cd div{min-width:78px;padding:.8rem .4rem;border:1px solid var(--gold);background:var(--paper);border-radius:50% 50% 8px 8px/38% 38% 8px 8px}
+.cd b{display:block;font:2.2rem/1.3 'Tiro Bangla';color:var(--deep)}.cd span{font-size:.85rem;color:var(--gold)}
+
+/* gallery */
+#gal{background:linear-gradient(var(--iv),#F7E6DC)}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;max-width:900px;margin:0 auto}
+.g figure{overflow:hidden;border:6px solid var(--paper);box-shadow:0 12px 30px rgba(58,28,31,.18);aspect-ratio:2/3}
+.g .w{grid-column:span 2;aspect-ratio:3/2}
+.g img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.6s}
+.g figure:hover img{transform:scale(1.08)}
+
+/* events */
+#ev{background:linear-gradient(#F7E6DC,var(--iv))}
+.eg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.6rem;max-width:840px;margin:0 auto}
+.ec{position:relative;padding:3rem 1.6rem 2.4rem;background:var(--paper);border:1px solid var(--gold);outline:1px solid rgba(184,134,47,.4);outline-offset:-9px}
+.ec .lo{font-size:2.4rem;color:var(--lal);display:block;margin:0 auto .4rem}
+.ec h3{font-family:'Tiro Bangla',serif;font-weight:400;font-size:2rem;color:var(--deep)}
+.ec .dt{font-weight:600;margin-top:.6rem}.ec p{color:var(--soft);font-size:.98rem}
+.ec .btn{margin-top:1.2rem;padding:.55rem 1.6rem;font-size:.92rem}
+
+/* closing */
+#end{background:var(--night);color:#fff;overflow:hidden}
+#end h2{color:var(--gl)}#end p{color:rgba(255,255,255,.82)}
+#end .big{font-family:'Tiro Bangla',serif;font-size:clamp(1.25rem,4vw,1.7rem);line-height:2;max-width:560px;margin:0 auto}
+#end .lo.bg{position:absolute;left:50%;top:50%;width:min(130vw,900px);height:auto;transform:translate(-50%,-50%);color:rgba(230,194,122,.07);animation:spin 90s linear infinite}
+#end>*{position:relative}
+
+/* video */
+#vid{background:var(--night);padding:0 1.4rem 4.5rem}
+.vw{max-width:780px;margin:0 auto;padding:10px;border:1px solid var(--gl);outline:1px solid rgba(230,194,122,.35);outline-offset:6px;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+video{width:100%;display:block;background:#000;pointer-events:none}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}[data-a],.hc>*{opacity:1;transform:none;clip-path:none}#pt{display:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="pe"><path d="M0 0C-13-12-13-32 0-44 13-32 13-12 0 0Z"/></g>
+<symbol id="lotus" viewBox="-50 -50 100 100"><use href="#pe"/><use href="#pe" transform="rotate(45)"/><use href="#pe" transform="rotate(90)"/><use href="#pe" transform="rotate(135)"/><use href="#pe" transform="rotate(180)"/><use href="#pe" transform="rotate(225)"/><use href="#pe" transform="rotate(270)"/><use href="#pe" transform="rotate(315)"/><circle r="6"/></symbol>
+</defs></svg>
+
+<audio id="bgm" src="audio/song.mp3" loop preload="auto"></audio>
+<div id="pt" aria-hidden="true"></div>
+
+<!-- দ্বার -->
+<div id="gate">
+  <div class="dr dl"></div><div class="dr dg"></div>
+  <div class="med">
+    <svg class="lo"><use href="#lotus"/></svg>
+    <p>শ্রী শ্রী প্রজাপতয়ে নমঃ</p>
+    <div class="n">সোমা ও দেবরূপ</div>
+    <p>আপনাকে সাদর আমন্ত্রণ<br>(আওয়াজ চালু রাখুন)</p>
+    <button class="btn" id="open">আমন্ত্রণ খুলুন</button>
+  </div>
+</div>
+
+<!-- প্রচ্ছদ -->
+<section id="hero">
+  <picture>
+    <source media="(min-width:800px)" srcset="images/s08.jpg">
+    <img src="images/dsc.jpg" alt="সোমা ও দেবরূপ">
+  </picture>
+  <div class="hc">
+    <p class="sub d">শ্রী শ্রী প্রজাপতয়ে নমঃ</p>
+    <h1 class="nam d" style="margin:.4rem 0"><small>শুভ বিবাহ</small>সোমা ও দেবরূপ</h1>
+    <p class="when d">৭ই অগ্রহায়ণ, ১৪৩৩ বঙ্গাব্দ &nbsp;|&nbsp; ২৪শে নভেম্বর, ২০২৬</p>
+  </div>
+  <span class="hint"></span>
+</section>
+
+<!-- আমন্ত্রণপত্র -->
+<section id="inv">
+  <h2 data-a="up">সাদর আমন্ত্রণ</h2>
+  <div class="dv" data-a="z"><svg class="lo"><use href="#lotus"/></svg></div>
+
+  <div class="sheet" data-a="up">
+    <p class="nom d">শুভ বিবাহ</p>
+    <p>সবিনয় নিবেদন,</p>
+    <p class="gap">আগামী <b>৭ই অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ, মঙ্গলবার</b><br>(ইংরেজি ২৪শে নভেম্বর ২০২৬) শুভ লগ্নে<br>আমাদের পরম স্নেহের কন্যা</p>
+    <span class="nm">কল্যাণীয়া সোমা</span>
+    <p>শ্রী ললিত সরদার ও শ্রীমতী মমতা সরদার-এর কন্যা<br>বেগড়ি, বানিয়াড়া, ডোমজুড়, হাওড়া</p>
+    <p class="gap">-এর সহিত</p>
+    <span class="nm">কল্যাণীয় দেবরূপ</span>
+    <p>স্বর্গীয় অলোক কুমার বেরা ও শ্রীমত্যা জয়শ্রী বেরা-র পুত্র<br>কোলা, কোলাঘাট, পূর্ব মেদিনীপুর</p>
+    <p class="gap">-এর শুভ পরিণয় সুসম্পন্ন হইবে।</p>
+    <p>এই মাঙ্গলিক অনুষ্ঠানে আপনি সপরিবারে ও সবান্ধবে উপস্থিত থাকিয়া<br>নবদম্পতিকে আশীর্বাদ ও শুভেচ্ছা জ্ঞাপন করিলে<br>আমরা পরম আনন্দিত ও কৃতজ্ঞ থাকিব।</p>
+    <p class="sig">বিনীত নিবেদক<br><b>শ্রী ললিত সরদার ও শ্রীমতী মমতা সরদার</b><br>ও সরদার পরিবারবর্গ</p>
+  </div>
+
+  <div class="sheet" data-a="up">
+    <p class="nom d">বিবাহের স্থান</p>
+    <p>শুভ বিবাহ অনুষ্ঠিত হইবে<br><b style="font-family:'Tiro Bangla',serif;font-weight:400;font-size:2rem;color:var(--lal)">সরকার ভবন</b></p>
+    <p class="gap">মঙ্গলবার, ৭ই অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ<br>(ইংরেজি ২৪শে নভেম্বর ২০২৬)</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://share.google/lO567ocdcr27EYXCM">মানচিত্রে দেখুন</a>
+  </div>
+
+  <div data-a="up" style="margin-top:3.4rem">
+    <p class="d" style="font-size:1.5rem;color:var(--deep)">শুভ দিনের অপেক্ষায়</p>
+    <div class="cd"><div><b id="cd">০</b><span>দিন</span></div><div><b id="ch">০</b><span>ঘণ্টা</span></div><div><b id="cm">০</b><span>মিনিট</span></div><div><b id="cs">০</b><span>সেকেন্ড</span></div></div>
+  </div>
+</section>
+
+<!-- মুহূর্ত -->
+<section id="gal">
+  <h2 data-a="up">দুজনের মুহূর্ত</h2>
+  <div class="dv" data-a="z"><svg class="lo"><use href="#lotus"/></svg></div>
+  <div class="g">
+    <figure class="w" data-a="m"><img src="images/g1.jpg" alt="" loading="lazy"></figure>
+    <figure data-a="l"><img src="images/dsc.jpg" alt="" loading="lazy"></figure>
+    <figure data-a="r"><img src="images/s03.jpg" alt="" loading="lazy"></figure>
+    <figure class="w" data-a="m"><img src="images/g2.jpg" alt="" loading="lazy"></figure>
+    <figure class="w" data-a="m"><img src="images/s05.jpg" alt="" loading="lazy"></figure>
+    <figure data-a="l"><img src="images/s09.jpg" alt="" loading="lazy"></figure>
+    <figure data-a="r"><img src="images/s11.jpg" alt="" loading="lazy"></figure>
+    <figure class="w" data-a="m"><img src="images/s06.jpg" alt="" loading="lazy"></figure>
+    <figure class="w" data-a="m"><img src="images/s08.jpg" alt="" loading="lazy"></figure>
+    <figure class="w" data-a="m"><img src="images/s10.jpg" alt="" loading="lazy"></figure>
+    <figure class="w" data-a="m"><img src="images/s12.jpg" alt="" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- সমাপন -->
+<section id="end">
+  <svg class="lo bg"><use href="#lotus"/></svg>
+  <h2 data-a="up">আপনাদের আশীর্বাদই পাথেয়</h2>
+  <div class="dv" data-a="z"><svg class="lo"><use href="#lotus"/></svg></div>
+  <p class="big" data-a="up">দুটি মন, দুটি পরিবার — এক নতুন পথচলা।<br>আপনাদের উপস্থিতি ও আশীর্বাদে<br>এই শুভ দিন পরিপূর্ণ হোক।</p>
+  <p data-a="up" style="margin-top:2.4rem">সস্নেহে ও শুভকামনায়<br><b class="d" style="color:var(--gl);font-size:1.3rem;font-weight:400">সরদার পরিবার</b></p>
+</section>
+
+<!-- আশীর্বাদী ভিডিও (একদম শেষে, কোনো লেখা ছাড়া) -->
+<section id="vid">
+  <div class="vw" data-a="z">
+    <video id="v" muted loop autoplay playsinline disablepictureinpicture preload="auto" poster="video/poster.jpg"><source src="video/blessing.mp4" type="video/mp4"></video>
+  </div>
+</section>
+
+<script>
+(function(){
+  var B=document.body,au=document.getElementById('bgm'),v=document.getElementById('v'),TARGET=.22,playing=false,fade;
+  function fadeIn(){clearInterval(fade);au.volume=0;fade=setInterval(function(){if(au.volume<TARGET-.01)au.volume=Math.min(TARGET,au.volume+.01);else{au.volume=TARGET;clearInterval(fade)}},120)}
+  function start(){var p=au.play();if(p&&p.then)p.then(function(){playing=true;fadeIn()}).catch(function(){})}
+  function stop(){au.pause()}
+  /* দ্বার খোলা — এই একটি ট্যাপেই গান শুরু হয় (ব্রাউজার ট্যাপ ছাড়া গান চালাতে দেয় না) */
+  document.getElementById('open').addEventListener('click',function(){au.volume=0;start();B.classList.add('open');window.scrollTo(0,0)});
+  /* ট্যাব বদলালে গান থামবে, ফিরলে আবার চলবে (ভিডিওর কারণে গান থামে না) */
+  document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else if(playing)au.play().catch(function(){})});
+  /* ভিডিও নিজে থেকেই চলবে (মিউট করা, কোনো বাটন নেই) */
+  v.muted=true;v.loop=true;
+  var vo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)v.play().catch(function(){});else v.pause()})},{threshold:.25});
+  vo.observe(v);
+
+  /* অ্যানিমেশন — স্ক্রল করলে ফুটে ওঠে */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-a]').forEach(function(el,i){el.style.transitionDelay=(i%2)*.12+'s';io.observe(el)});
+
+  /* ঝরা ফুলের পাপড়ি */
+  var P=document.getElementById('pt'),C=['#E6C27A','#F4B6B0','#D9534F','#F7DDA6','#fff'];
+  for(var i=0;i<16;i++){var s=document.createElement('i'),z=9+Math.random()*11;s.className='p';s.style.cssText='width:'+z+'px;height:'+z+'px;background:'+C[i%5]+';left:'+Math.random()*100+'%;animation-duration:'+(11+Math.random()*12)+'s;animation-delay:'+Math.random()*12+'s';P.appendChild(s)}
+
+  /* কাউন্টডাউন */
+  function bn(n){return String(n).replace(/\d/g,function(d){return '০১২৩৪৫৬৭৮৯'[d]})}
+  var T=new Date('2026-11-24T00:00:00+05:30');
+  function tick(){var f=Math.max(0,T-new Date());
+    document.getElementById('cd').textContent=bn(Math.floor(f/864e5));
+    document.getElementById('ch').textContent=bn(Math.floor(f%864e5/36e5));
+    document.getElementById('cm').textContent=bn(Math.floor(f%36e5/6e4));
+    document.getElementById('cs').textContent=bn(Math.floor(f%6e4/1e3))}
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
